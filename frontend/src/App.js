@@ -6,6 +6,9 @@ import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import AboutPage from './pages/AboutPage';
 import EvidenceDetailPage from './pages/EvidenceDetailPage';
+import Login from './components/Login';
+import Register from './components/Register';
+import UploadEvidence from './components/UploadEvidence';
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
             <Route path="/search" element={<SearchPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/evidence/:id" element={<EvidenceDetailPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/upload" element={<UploadEvidence />} />
           </Routes>
         </main>
       </div>
