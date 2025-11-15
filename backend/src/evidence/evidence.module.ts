@@ -1,13 +1,10 @@
 import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
 import { EvidenceController } from './evidence.controller';
 import { EvidenceService } from './evidence.service';
-import { Evidence, EvidenceSchema } from './schemas/evidence.schema';
 import { AuthModule } from '../auth/auth.module';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: Evidence.name, schema: EvidenceSchema }]),
     AuthModule
   ],
   controllers: [EvidenceController],
